@@ -8,7 +8,7 @@ Marvel Wiki allows the user to click on their favorite Marvel hero displaying th
 
 ## Wireframes
 
-![alt text](Screen Shot 2019-10-18 at 9.21.55 AM.png)
+![alt text](https://pastepic.xyz/image/SGzQI)
 ## MVP
 
 -Have two pages,one that lists all characters and another that shows information on the character selected
