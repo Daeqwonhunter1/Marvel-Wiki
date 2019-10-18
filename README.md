@@ -8,7 +8,7 @@ Marvel Wiki allows the user to click on their favorite Marvel hero displaying th
 
 ## Wireframes
 
-<img src="Screen Shot 2019-10-18 at 9.22.24 AM.png" width = "300" height="300">
+<img src="/Users/dhunter/Desktop/SEI Projects/marvelwiki/Screen Shot 2019-10-18 at 9.21.55 AM.png" width = "300" height="300">
 ## MVP
 
 -Have two pages,one that lists all characters and another that shows information on the character selected
