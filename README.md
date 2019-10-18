@@ -10,7 +10,7 @@ Marvel Wiki allows the user to click on their favorite Marvel hero displaying th
 
 <img src="https://res.cloudinary.com/df2vpxtrb/image/upload/v1571410494/Project/Screen_Shot_2019-10-18_at_9.21.55_AM_jjocbs.png" width = "500" height="500">
 
-<img src = "https://res.cloudinary.com/df2vpxtrb/image/upload/v1571410496/Project/Screen_Shot_2019-10-18_at_9.22.24_AM_layx4s.png" width = "500" height="500 >
+<img src ="https://res.cloudinary.com/df2vpxtrb/image/upload/v1571410496/Project/Screen_Shot_2019-10-18_at_9.22.24_AM_layx4s.png" width = "500" height="500 >
 ## MVP
 
 -Have two pages,one that lists all characters and another that shows information on the character selected
