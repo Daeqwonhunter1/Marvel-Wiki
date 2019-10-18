@@ -8,9 +8,9 @@ Marvel Wiki allows the user to click on their favorite Marvel hero displaying th
 
 ## Wireframes
 
-![image](/Users/dhunter/Library/Mobile Documents/com~apple~CloudDocs/.Trash/Screen Shot 2019-10-18 at 9.21.55 AM.png)
+![image .png](/Users/dhunter/Library/Mobile Documents/com~apple~CloudDocs/.Trash/Screen Shot 2019-10-18 at 9.21.55 AM.png)
 
-![image](/Users/dhunter/Library/Mobile Documents/com~apple~CloudDocs/.Trash/Screen Shot 2019-10-18 at 9.22.24 AM.png)
+![image .png](/Users/dhunter/Library/Mobile Documents/com~apple~CloudDocs/.Trash/Screen Shot 2019-10-18 at 9.22.24 AM.png)
 ## MVP
 
 -Have two pages,one that lists all characters and another that shows information on the character selected
