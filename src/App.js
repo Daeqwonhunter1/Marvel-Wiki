@@ -1,10 +1,11 @@
 import React from 'react';
 import md5 from 'md5'
 import './App.css';
-import axios from 'axios';
+
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import Profile from './components/Profile'
 import { Route } from 'react-router-dom'
 import { getCharacters } from './services/api-helper'
 
@@ -22,8 +23,8 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      api: []
-
+      api: [],
+      charID: ""
     }
   }
 
@@ -34,7 +35,7 @@ class App extends React.Component {
     //   //     api: response.data.data.results
     //   //   })
     //   // }
-    const response = await getCharacters(0, publicKey, ts, hash)
+    const response = await getCharacters(0, publicKey, hash, ts)
     this.setState({
       api: response.data.data.results
     })
@@ -74,12 +75,13 @@ class App extends React.Component {
 
 
   render() {
-    console.log(this.state.api)
+
     return (
       <div className="App" >
 
         <Header />
-        <Main listAPI={this.state.api} />
+        <Route exact path='/' render={() => (<Main listAPI={this.state.api} />)} />
+        <Route path="/:id" render={(props) => (<Profile charId={props.match.params.id} />)} />
         <Footer />
       </div>
     );
