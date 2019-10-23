@@ -1,14 +1,14 @@
 body,
 html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Bangers', cursive;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   background-image: url("https://wallpaperaccess.com/full/191572.jpg");
   background-attachment: fixed;
+
 
   width: 100%;
   height: 100%;

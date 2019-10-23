@@ -1,6 +1,9 @@
 import React from 'react'
-import { getCharacterId } from '../services/api-helper'
+import { getCharacterId, getCharacterComics } from '../services/api-helper'
 import md5 from 'md5'
+import Header from './Header'
+import ReturnCharacter from './ReturnCharacter'
+import ReturnComics from './ReturnComics'
 
 
 const publicKey = "78261c1de8c45815a8ff89f57cbef60e"
@@ -14,7 +17,12 @@ export default class Profile extends React.Component {
     super(props)
     this.state = {
       api: [],
-      charId: this.props.charId
+      charId: this.props.charId,
+      comic: [],
+      valueId: this.props.charId2,
+      name: this.props.charName,
+
+
 
     }
   }
@@ -25,23 +33,50 @@ export default class Profile extends React.Component {
     this.setState({
       api: response.data.data.results
     })
+    const result = await getCharacterComics(this.state.charId, publicKey, hash, ts)
+    this.setState({
+      comic: result.data.data.results
+    })
+
+
   }
 
 
   render() {
-    console.log(this.state.api)
-    const getChar = this.state.api.map(char => {
-      return (
-        <div key={char.id}>
-          <img className="char-image" src={char.thumbnail.path + "." + char.thumbnail.extension} alt={char.name} />
-          {console.log(char.name)}
-        </div>
-      )
-    })
+
+    // console.log(this.state.comic)
+    // const getChar = this.state.api.map(char => {
+    //   return (
+    //     <div className="char-info" key={char.id}>
+    //       <h1>{char.name}</h1>
+    //       <img className="char-image" src={char.thumbnail.path + "." + char.thumbnail.extension} alt={char.name} />
+    //       <div className="description">
+    //         <p>{char.description}</p>
+
+    //       </div>
+    //     </div>
+    //   )
+    // })
+
+    // const getComic = this.state.comic.map(comic => {
+    //   return (
+    //     <div id="comic-image">
+    //       <img className="comics" src={comic.thumbnail.path + "." + comic.thumbnail.extension} alt={comic} />
+    //     </div >
+    //   )
+    // })
+
+
     return (
-      <div>
-        {getChar}
-      </div>
+
+      <div className="profile">
+        <ReturnCharacter getChar={this.state.api} />
+        <ReturnComics getComic={this.state.comic} />
+        {/* {getChar} */}
+        {/* {getComic} */}
+        {/* <Header handleSubmit={this.handleSubmit} onChange={this.handleChange} value={this.state.value} /> */}
+
+      </div >
     )
 
 
