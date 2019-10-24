@@ -1,6 +1,10 @@
 import React from 'react'
 
 
-function More() {
-
+function MoreButton() {
+  <div>
+    <button>
+      More characters
+    </button>
+  </div>
 }

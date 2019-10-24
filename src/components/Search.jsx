@@ -3,6 +3,7 @@ import { getCharacterByName, getSelectiveResponse } from '../services/api-helper
 import md5 from 'md5'
 import { Route, withRouter } from 'react-router-dom'
 import Profile from './Profile'
+import AutoComplete from './AutoComplete'
 
 
 
@@ -13,11 +14,13 @@ const ts = Date.now();
 const hash = md5(ts + privateKey + publicKey);
 
 class Search extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       name: [],
-      charName: "",
+      charName: '',
+      words: []
+
 
     }
   }
@@ -44,24 +47,23 @@ class Search extends React.Component {
   autoComplete = async (event) => {
     const response = await getSelectiveResponse(this.state.charName, publicKey, hash, ts)
     this.setState({
-      words: response.data.name
+      words: response.data.data.results
     })
+
   }
 
   render() {
     return (
       <div>
-
-        <form onChange={this.autoComplete} onKeyDown={this.handleClick} onSubmit={this.handleSubmit} >
+        <form onChange={this.autoComplete} autoComplete="off" onSubmit={this.handleSubmit} >
           <div className="autocomplete">
             <input type="search" name="search" placeholder="search..." onChange={this.handleChange} />
           </div>
         </form>
-        {console.log(this.state.words)}
-        {console.log(this.state.id)}
 
-        {/* <Route path="/:searchname" render={() => <Profile charId2={this.state.id} />} /> */}
-        <Route path="/:id" render={(props) => (<Profile charId={props.match.params.id} />)} />
+
+        {/* <Route path="/:id" render={(props) => (<Profile charId={props.match.params.id} />)} /> */}
+        <AutoComplete suggestions={this.state.words} />
 
       </div>
     )

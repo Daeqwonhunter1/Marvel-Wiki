@@ -39,3 +39,5 @@ export const getSelectiveResponse = async (input, publicKey, hash, ts) => {
 // for (offset = 0; offset < 1400) {
 //   offset = +100
 // }
+
+export const getRandomNumber = Math.floor(Math.random() * 1484)
