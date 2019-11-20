@@ -1,8 +1,8 @@
 import React from 'react'
 import { getCharacterByName, getSelectiveResponse } from '../services/api-helper'
 import md5 from 'md5'
-import { Route, withRouter } from 'react-router-dom'
-import Profile from './Profile'
+import { withRouter } from 'react-router-dom'
+
 import AutoComplete from './AutoComplete'
 
 
@@ -62,7 +62,7 @@ class Search extends React.Component {
         </form>
 
 
-        {/* <Route path="/:id" render={(props) => (<Profile charId={props.match.params.id} />)} /> */}
+        
         <AutoComplete suggestions={this.state.words} />
 
       </div>

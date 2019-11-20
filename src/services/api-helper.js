@@ -36,8 +36,6 @@ export const getSelectiveResponse = async (input, publicKey, hash, ts) => {
   const request = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${input}&limit=100&apikey=${publicKey}&hash=${hash}&ts=${ts}`)
   return request
 }
-// for (offset = 0; offset < 1400) {
-//   offset = +100
-// }
+
 
 export const getRandomNumber = Math.floor(Math.random() * 1484)
